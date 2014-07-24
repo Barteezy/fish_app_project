@@ -13,6 +13,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'capybara'
-  gem 'launchy'
+  gem 'capybara', '~> 2.3.0'
+  gem 'launchy', '~> 2.4.2'
 end
