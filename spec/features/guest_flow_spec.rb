@@ -6,7 +6,8 @@ feature "guest flow" do
     visit "/"
 
     within("h1") do
-      expect(page).to have_content("Welcome to the fishing app")
+      expect(page).to have_content("Fish Log")
     end
+      click_on "register"
   end
 end
