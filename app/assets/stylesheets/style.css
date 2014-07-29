@@ -1,0 +1,36 @@
+body {
+    line-height: 1.5;
+    color: white;
+    background: url('IMG_0587.JPG');
+    font-family: 'Lato', sans-serif, serif;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Rokkitt', serif;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+a {
+    color: #bfe35b;
+    text-decoration: none;
+}
