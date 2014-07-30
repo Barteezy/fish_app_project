@@ -12,6 +12,7 @@ body {
 .container {
     width: 500px;
     margin: 0 auto;
+    margin-top: 50px;
 
     background: rgba(0,0,0,0.5);
     padding: 20px;
@@ -33,4 +34,28 @@ h2 {
 a {
     color: #bfe35b;
     text-decoration: none;
+}
+
+nav {
+    background-color: black;
+    height: 50px;
+}
+
+nav ul {
+
+}
+
+nav ul li {
+    list-style-type: none;
+    width: 150px;
+    float: right;
+    border-right: 1px, solid #CCCCCC;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    display: block;
 }
