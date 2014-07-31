@@ -1,5 +1,4 @@
 require "rails_helper"
-require 'capybara/rails'
 
 feature "guest flow" do
   scenario "guest can go to the homepage" do
@@ -12,6 +11,7 @@ feature "guest flow" do
 
     fill_in "username", :with => "bill"
     fill_in "password", :with => "bill"
+    fill_in "password_confirmation", :with => "bill"
     fill_in "email", :with => "bill@bill.com"
 
     click_on "sign_up"

@@ -17,6 +17,7 @@ class MainController < ApplicationController
     user.username = params[:username]
     user.email = params[:email]
     user.password = params[:password]
+    user.password_confirmation = params[:password_confirmation]
 
     if user.save
       session[:user_id] = user.id
@@ -30,19 +31,20 @@ class MainController < ApplicationController
   def login_post
       username = params[:username]
       password = params[:password]
+
       user = User.find_by(username: username)
 
       if user == nil
         flash[:error] = "Username Not Found"
-
-        render :login
-      elsif user.password == nil
-        flash[:error2] = "Password does not match"
-
         render :login
       else
-        session[:user_id] = user.id
-        redirect_to "/profile"
+        if user.authenticate(password)
+          session[:user_id] = user.id
+          redirect_to "/profile"
+        else
+          flash[:error2] = "Password does not match"
+          render :login
+        end
       end
   end
 

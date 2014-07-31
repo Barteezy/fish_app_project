@@ -12,6 +12,7 @@ feature "user flow" do
 
     fill_in "username", :with => "bill"
     fill_in "password", :with => "bill"
+    fill_in "password_confirmation", :with => "bill"
     fill_in "email", :with => "bill@bill.com"
 
     click_on "sign_up"
